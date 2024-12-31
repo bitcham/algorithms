@@ -18,6 +18,25 @@ string Subtract(string str1, string str2)
 	string result(N, '0');
 
 	// TODO: 더하기와 거의 비슷합니다.
+	int carry = 0;
+	for (int i = N - 1; i >= 0; i--) {
+		
+		int n1 = str1[i] - '0'; // 문자를 정수로 변환
+		int n2 = str2[i] - '0';
+		int sum = n1 - n2 + carry + 10;
+		carry = sum / 10 - 1;
+		result[i] = char(sum % 10 + '0');
+	}
+
+	for (int i = 0; i < result.size() - 1; i++) {
+		if (result[i] == '0') {
+			result = result.substr(i + 1);
+		}
+		else {
+			break;
+		}
+	}
+
 
 	// 불필요한 '0' 제거 (예: "078" -> "78")
 	// TODO:

@@ -3,8 +3,10 @@
     "",
     "\\Ex0001_StandardLibraries",
     "\\Ex0002_WarmingUp",
-    "\\Ex0101_Addition"
+    "\\Ex0101_Addition",
+    "\\Ex0102_Subtraction",
+    "\\Ex0103_Multiplication"
   ],
-  "SelectedNode": "\\Ex0101_Addition\\Ex0101_Addition.cpp",
+  "SelectedNode": "\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
   "PreviewInSolutionExplorer": false
 }

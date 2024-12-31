@@ -6,10 +6,38 @@ using namespace std;
 
 string Multiply(string str1, string str2)
 {
+	if (!str1.size() || !str2.size())
+		return "0";
+
+	int N = max(str1.size(), str2.size());
+	str1 = string(N - str1.size(), '0') + str1; 
+	str2 = string(N - str2.size(), '0') + str2;
+
+	string result(2 * N, '0');
+
+	for (int i = N - 1; i >= 0; i--) // 역순
+	{
+		int carry = 0;
+		int n1 = str1[i] - '0';
+		int k = N + i; // 결과를 저장할 위치의 인덱스
+		for (int j = N - 1; j >= 0; j--) // 역순
+		{
+			// TODO:
+			k -= 1; // <- k가 하나씩 감소
+
+			// Trace (변수에 저장된 값들의 변화를 추적)
+			// cout << n1 << " " << n2 << " " << carry << " " << result << endl;
+		}
+		// 마지막에는 carry만
+		// TODO:
+	}
+
+	// 불필요한 '0' 제거
 	// TODO:
 
-	return "0";
+	return result;
 }
+
 
 int main()
 {
