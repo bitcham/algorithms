@@ -82,13 +82,19 @@ string KaratsubaHelper(string str1, string str2, int level) // level은 디버�
 	string d = str2.substr(mid, N - mid);
 
 	string ac = KaratsubaHelper(a, c, level + 1);
-	// TODO:
+	string bd = KaratsubaHelper(b, d, level + 1);
+	string z = KaratsubaHelper(Add(a, b), Add(c, d), level + 1);
+	string k = Subtract(z, Add(ac, bd));
+	
 
 	// 문자열 뒤에 '0'을 추가해서 10^N를 O(N)으로 처리
 	ac.append(string((N - mid) * 2, '0'));
-	// TODO: ...
+	k.append(string((N - mid), '0'));
+		// TODO: ...
 
-	// string result = TODO;
+
+
+	string result = Add(Add(ac, k), bd);
 
 	// 디버깅 참고 (저는 하나하나 다 출력해보면서 디버깅합니다.)
 	//int ai = stoi(a);
@@ -103,7 +109,7 @@ string KaratsubaHelper(string str1, string str2, int level) // level은 디버�
 	// 주의: int 범위를 넘어가는 큰 숫자에 대해서는 사용할 수 없음
 	// assert(stoi(result) == stoi(str1) * stoi(str2));
 
-	return string("0"); // return result;
+	return result; // return result;
 }
 
 string Karatsuba(string str1, string str2)

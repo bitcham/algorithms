@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ckaql\\algorithms\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0103_Multiplication\\Ex0103_Multiplication.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0101_Addition\\Ex0101_Addition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0101_Addition\\Ex0101_Addition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0102_Subtraction\\Ex0102_Subtraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0102_Subtraction\\Ex0102_Subtraction.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0101_Addition\\Ex0101_Addition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0101_Addition\\Ex0101_Addition.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0002_WarmingUp\\Ex0002_WarmingUp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -31,45 +39,68 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Ex0103_Multiplication.cpp",
-              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
-              "RelativeDocumentMoniker": "Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
-              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
-              "RelativeToolTip": "Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwBUAAAAQAAAAAAAAAA==",
+              "Title": "Ex0201_InsertionSort.cpp",
+              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp",
+              "RelativeDocumentMoniker": "Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp",
+              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp",
+              "RelativeToolTip": "Ex0201_InsertionSort\\Ex0201_InsertionSort.cpp",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-30T20:35:43.101Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ex0102_Subtraction.cpp",
-              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
-              "RelativeDocumentMoniker": "Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
-              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
-              "RelativeToolTip": "Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwBIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-30T20:14:47.739Z",
+              "WhenOpened": "2025-01-02T16:19:40.455Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Ex0104_Karatsuba.cpp",
+              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp",
+              "RelativeDocumentMoniker": "Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp",
+              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp",
+              "RelativeToolTip": "Ex0104_Karatsuba\\Ex0104_Karatsuba.cpp",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwv1sAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-31T21:43:00.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ex0103_Multiplication.cpp",
+              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
+              "RelativeDocumentMoniker": "Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
+              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
+              "RelativeToolTip": "Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T20:35:43.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ex0102_Subtraction.cpp",
+              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
+              "RelativeDocumentMoniker": "Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
+              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
+              "RelativeToolTip": "Ex0102_Subtraction\\Ex0102_Subtraction.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-30T20:14:47.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Ex0101_Addition.cpp",
               "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0101_Addition\\Ex0101_Addition.cpp",
               "RelativeDocumentMoniker": "Ex0101_Addition\\Ex0101_Addition.cpp",
               "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0101_Addition\\Ex0101_Addition.cpp",
               "RelativeToolTip": "Ex0101_Addition\\Ex0101_Addition.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-28T21:13:45.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-28T21:13:45.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Ex0002_WarmingUp.cpp",
               "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0002_WarmingUp\\Ex0002_WarmingUp.cpp",
               "RelativeDocumentMoniker": "Ex0002_WarmingUp\\Ex0002_WarmingUp.cpp",

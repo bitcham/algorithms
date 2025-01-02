@@ -23,17 +23,34 @@ string Multiply(string str1, string str2)
 		for (int j = N - 1; j >= 0; j--) // 역순
 		{
 			// TODO:
-			k -= 1; // <- k가 하나씩 감소
+
+			int n2 = str2[j] - '0';
+			int temp = result[k] - '0';
+			int sum = n1 * n2 + carry + temp;
+			carry = sum / 10;
+
+			result[k] = char(sum % 10 + '0');
+
+			k--; // <- k가 하나씩 감소
+			
 
 			// Trace (변수에 저장된 값들의 변화를 추적)
-			// cout << n1 << " " << n2 << " " << carry << " " << result << endl;
+			cout << n1 << " " << n2 << " " << carry << " " << result << endl;
 		}
 		// 마지막에는 carry만
 		// TODO:
+		if (carry > 0) {
+			result[k] = char(carry + '0');
+		}
 	}
 
 	// 불필요한 '0' 제거
 	// TODO:
+	
+	int i = 0;
+	while (result[i] == '0') {
+		result = result.substr(i + 1);
+	}
 
 	return result;
 }

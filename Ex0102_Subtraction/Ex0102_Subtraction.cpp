@@ -28,14 +28,9 @@ string Subtract(string str1, string str2)
 		result[i] = char(sum % 10 + '0');
 	}
 
-	for (int i = 0; i < result.size() - 1; i++) {
-		if (result[i] == '0') {
-			result = result.substr(i + 1);
-		}
-		else {
-			break;
-		}
-	}
+	int i = 0;
+	while (result[i] == '0') i += 1;
+	result = result.substr(i, N - i);
 
 
 	// 불필요한 '0' 제거 (예: "078" -> "78")

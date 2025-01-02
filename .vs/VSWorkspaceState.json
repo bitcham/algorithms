@@ -5,8 +5,10 @@
     "\\Ex0002_WarmingUp",
     "\\Ex0101_Addition",
     "\\Ex0102_Subtraction",
-    "\\Ex0103_Multiplication"
+    "\\Ex0103_Multiplication",
+    "\\Ex0104_Karatsuba",
+    "\\Ex0201_InsertionSort"
   ],
-  "SelectedNode": "\\Ex0103_Multiplication\\Ex0103_Multiplication.cpp",
+  "SelectedNode": "\\Ex0201_InsertionSort\\Ex0201_InsertionSort.vcxproj",
   "PreviewInSolutionExplorer": false
 }
