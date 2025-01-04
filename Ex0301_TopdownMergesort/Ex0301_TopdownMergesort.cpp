@@ -47,15 +47,20 @@ private:
 
 		int i = lo, j = mid + 1;
 
+
 		for (int k = lo; k <= hi; k++)
 			aux[k] = a[k];
 
 		for (int k = lo; k <= hi; k++)
 		{
-			//if (i > mid) TODO;
-			//else if (j > hi) TODO;
-			//else if (aux[j] < aux[i]) TODO;
-			//else a[k] = TODO;
+			if (i > mid) {
+				a[k] = aux[j++];
+			} else if (j > hi) {
+				a[k] = aux[i++];
+			} else if (aux[j] < aux[i]) {
+				a[k] = a[j++];
+			}
+			else a[k] = a[i++];
 		}
 
 		cout << "After : ";
@@ -71,9 +76,8 @@ private:
 
 		int mid = lo + (hi - lo) / 2;
 
-		//TODO:
-		//TODO:
-
+		SortHelper(a, lo, mid);
+		SortHelper(a, mid + 1, hi);
 		Merge(a, lo, mid, hi);
 	}
 

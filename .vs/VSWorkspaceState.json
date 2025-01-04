@@ -1,14 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ex0001_StandardLibraries",
     "\\Ex0002_WarmingUp",
     "\\Ex0101_Addition",
     "\\Ex0102_Subtraction",
     "\\Ex0103_Multiplication",
     "\\Ex0104_Karatsuba",
-    "\\Ex0201_InsertionSort"
+    "\\Ex0201_InsertionSort",
+    "\\Ex0301_TopdownMergesort",
+    "\\Ex0302_BottomupMergesort",
+    "\\Ex0401_CountOccurrences"
   ],
-  "SelectedNode": "\\Ex0201_InsertionSort\\Ex0201_InsertionSort.vcxproj",
+  "SelectedNode": "\\Ex0401_CountOccurrences\\Ex0401_CountOccurrences.cpp",
   "PreviewInSolutionExplorer": false
 }

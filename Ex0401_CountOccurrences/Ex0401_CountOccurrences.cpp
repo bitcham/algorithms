@@ -16,20 +16,101 @@ void Print(vector<int>& arr)
 int Count1(const vector<int>& arr, int x)
 {
 	//TODO: O(n)
-	return 0;
+	int count = 0;
+	for (int i = 0; i < arr.size(); i++) {
+		if (arr[i] == x) count++;
+	}
+	return count;
+		
+}
+
+int BinarySearch(const vector<int>& arr, int lo, int hi, int x) {
+	while (lo <= hi) {
+		int middle = lo + (hi - lo) / 2;
+		if (x < arr[middle])
+			hi = middle - 1;
+		else if (x > arr[middle])
+			lo = middle + 1;
+		else
+			return middle;
+	}
+	return -1;
 }
 
 int Count2(const vector<int>& arr, int x)
 {
 	//TODO: O(log(n) + count)
-	return 0;
+	const int n = arr.size();
+	int i = BinarySearch(arr, 0, n - 1, x);
+	if (i == -1) {
+		return 0;
+	}
+
+	int count = 1;
+	int left = i - 1;
+	while (left >= 0 && arr[left] == x) {
+		count++;
+		left--;
+	}
+
+	int right = i + 1;
+	while (right < n && arr[right] == x) {
+		count++;
+		right++;
+	}
+
+	return count;
 }
+
+int FindFirst(const vector<int>& arr, int lo, int hi, int x) {
+
+
+	if (hi >= lo) {
+		int n = arr.size();
+		int mid = lo + (hi - lo) / 2;
+		if ((mid == 0 || x > arr[mid - 1]) && arr[mid] == x) return mid;
+		else if (x > arr[mid]) return FindFirst(arr, (mid + 1), hi, x);
+		else return FindFirst(arr, lo, mid - 1, x);
+	}
+
+	return -1;
+}
+
+int FindLast(const vector<int>& arr, int lo, int hi, int x) {
+
+	if (hi >= lo) {
+		int n = arr.size();
+		int mid = (lo + hi) / 2;
+		if ((mid == n - 1 || x < arr[mid + 1]) && arr[mid] == x) return mid;
+		else if (x < arr[mid]) return FindLast(arr, lo, (mid - 1), x);
+		else return FindLast(arr, (mid + 1), hi, x);
+	}
+
+
+
+	return -1;
+}
+
+
 
 int Count3(const vector<int>& arr, int x)
 {
 	//TODO: O(log(n))
-	return 0;
+	int n = arr.size();
+	int firstIdx = FindFirst(arr, 0, n - 1, x);
+	
+	
+	if (firstIdx == -1) {
+		return 0;
+	}
+
+	int lastIdx = FindLast(arr, firstIdx, n - 1, x);
+
+	return lastIdx - firstIdx + 1;
+	
 }
+
+
 
 int main()
 {
