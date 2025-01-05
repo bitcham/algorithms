@@ -76,11 +76,17 @@ int RandomizedSelect(vector<int>& arr, int lo, int hi, int k)
 
 	int index = Partition(arr, lo, hi); // pivot index
 
-	//if (index - lo == k - 1) TODO;
-	//else if (k - 1 < index - lo) TODO;
-	//else TODO;
+	//TODO:
+	if (index - lo == k - 1) {
+		return arr[index];
+	}
+	else if (k - 1 < index - lo) {
+		return RandomizedSelect(arr, lo, index - 1, k);
+	}
+	else {
+		return RandomizedSelect(arr, index + 1, hi, k - index + lo - 1);
+	}
 
-	return -1; // 임시구현
 }
 
 int main()

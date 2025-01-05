@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ex0002_WarmingUp",
-    "\\Ex0101_Addition",
-    "\\Ex0102_Subtraction",
-    "\\Ex0103_Multiplication",
     "\\Ex0104_Karatsuba",
     "\\Ex0201_InsertionSort",
     "\\Ex0301_TopdownMergesort",
     "\\Ex0302_BottomupMergesort",
-    "\\Ex0401_CountOccurrences"
+    "\\Ex0401_CountOccurrences",
+    "\\Ex0402_PartialSelectionSort",
+    "\\Ex0403_MinAndMax",
+    "\\Ex0404_PartitionByPivot",
+    "\\Ex0405_ExpectedLinearSelection"
   ],
-  "SelectedNode": "\\Ex0401_CountOccurrences\\Ex0401_CountOccurrences.cpp",
+  "SelectedNode": "\\Ex0405_ExpectedLinearSelection\\Ex0405_ExpectedLinearSelection.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -25,6 +25,11 @@ int main()
 	Print(arr);
 
 	// TODO:
+	for (int j = lo; j < hi - 1; j++) {
+		if (arr[j] <= x) {
+			swap(arr[j], arr[++i]);
+		}
+	}
 
 	swap(arr[i + 1], arr[hi]);
 	Print(arr);
