@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ex0104_Karatsuba",
-    "\\Ex0201_InsertionSort",
-    "\\Ex0301_TopdownMergesort",
     "\\Ex0302_BottomupMergesort",
     "\\Ex0401_CountOccurrences",
     "\\Ex0402_PartialSelectionSort",
     "\\Ex0403_MinAndMax",
     "\\Ex0404_PartitionByPivot",
-    "\\Ex0405_ExpectedLinearSelection"
+    "\\Ex0405_ExpectedLinearSelection",
+    "\\Ex0406_WorstcaseLinearSelection",
+    "\\Ex0501_RandomizedQuicksort",
+    "\\Ex0502_Quick3way"
   ],
-  "SelectedNode": "\\Ex0405_ExpectedLinearSelection\\Ex0405_ExpectedLinearSelection.cpp",
+  "SelectedNode": "\\Ex0502_Quick3way\\Ex0502_Quick3way.cpp",
   "PreviewInSolutionExplorer": false
 }
