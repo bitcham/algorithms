@@ -30,15 +30,25 @@ void Quick3way(vector<int>& arr, int lo, int hi)
 	int lt = lo, i = lo + 1, gt = hi;
 	int v = arr[lo];
 
-	//while (i <= gt)
-	//{
-	//	// TODO:
-	//}
+	while (i <= gt)
+	{
+		// TODO:
+		if (arr[i] < v) {
+			swap(arr[i++], arr[lt++]);
+		}
+		else if (arr[i] > v) {
+			swap(arr[i], arr[gt--]);
+		}
+		else {
+			i++;
+		}
+	}
+
 
 	Print(arr, lo, hi);
 
-	//Quick3way(arr, lo, lt - 1);
-	//Quick3way(arr, gt + 1, hi);
+	Quick3way(arr, lo, lt - 1);
+	Quick3way(arr, gt + 1, hi);
 }
 
 int main()
