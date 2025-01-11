@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Ex0502_Quick3way"
+    "\\Ex0502_Quick3way",
+    "\\Ex0601_CountingSort",
+    "\\Ex0602_RadixSort",
+    "\\Ex0603_SortingWords",
+    "\\Ex0604_BucketSort"
   ],
-  "SelectedNode": "\\Ex0502_Quick3way\\Ex0502_Quick3way.cpp",
+  "SelectedNode": "\\Ex0604_BucketSort\\Ex0604_BucketSort.vcxproj",
   "PreviewInSolutionExplorer": false
 }

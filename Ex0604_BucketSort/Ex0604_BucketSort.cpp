@@ -45,16 +45,29 @@ void BucketSort(vector<float>& arr, int num_buckets)
 	vector<vector<float>> buckets(num_buckets);
 
 	// TODO:
+	for (int i = 0; i < arr.size(); i++) {
+		buckets[int(arr[i] / 0.1)].push_back(arr[i]);
+	}
 
 	cout << "Before sorting" << endl;
 	PrintBuckets(buckets);
 
 	// TODO:
+	for (int i = 0; i < num_buckets; i++) {
+		InsertionSort(buckets[i]);
+	}
 
 	cout << "After sorting" << endl;
 	PrintBuckets(buckets);
 
 	// TODO:
+	int j = 0;
+	for (int i = 0; i < num_buckets; i++) {
+		for (int k = 0; k < buckets[i].size(); k++) {
+			arr[j++] = buckets[i][k];
+		}
+	}
+
 }
 
 int main()
