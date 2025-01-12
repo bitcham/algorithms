@@ -64,10 +64,9 @@ public:
 	{
 		if (x == nullptr) return -1; // 편의상 못 찾았을 경우 -1 반환
 
-		// if (key < x->key) TODO:
-		// else if (key > x->key) TODO:
-		// else return x->val;
-		return -1; // TODO: 삭제
+		if (key < x->key) return Search(x->left, key);
+		else if (key > x->key) return Search(x->right, key);
+		else return x->val;
 	}
 
 	// 이진트리 복습
@@ -76,10 +75,9 @@ public:
 	{
 		if (x == nullptr) return false;
 
-		// if (key < x->key) TODO:
-		// else if (key > x->key) TODO:
-		// else return true;
-		return false; // 삭제
+		if (key < x->key) return Contains(x->left, key);
+		else if (key > x->key) return Contains(x->right, key);
+		else return true;
 	}
 
 	// 키(key)가 가장 작은 노드 찾기 (이진트리 복습)
@@ -89,8 +87,11 @@ public:
 	}
 	Node* Min(Node* x)
 	{
-		// return TODO:
-		return nullptr; // 삭제
+		Node* current = x;
+		while (current->left != nullptr) {
+			current = current->left;
+		}
+		return current;
 	}
 
 	// 키(key)가 가장 큰 노드 찾기 (이진트리 복습)
@@ -100,16 +101,19 @@ public:
 	}
 	Node* Max(Node* x)
 	{
-		// return TODO:
-		return nullptr; // 삭제
+		Node* current = x;
+		while (current->right != nullptr) {
+			current = current->right;
+		}
+		return current;
 	}
 
 	// AVL과 비슷
 	Node* RotateLeft(Node* h)
 	{
 		Node* x = h->right; // 회전 후에 부모 자리로 올라갈 노드
-		// h->right = TODO
-		// x->left = TODO
+		h->right = x->left;
+		x->left = h
 		x->color = h->color;
 		h->color = Color::kRed; // 일단 레드로 설정 후 나중에 수정
 		x->size = h->size;
@@ -121,8 +125,8 @@ public:
 	Node* RotateRight(Node* h)
 	{
 		Node* x = h->left; // 회전 후에 부모 자리로 올라갈 노드
-		// h->left = TODO
-		// x->right = TODO
+		h->left = x->right;
+		x->right = h;
 		x->color = h->color;
 		h->color = Color::kRed; // 일단 레드로 설정 후 나중에 수정
 		x->size = h->size;

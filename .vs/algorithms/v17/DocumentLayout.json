@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ckaql\\algorithms\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ckaql\\algorithms\\Ex0604_BucketSort\\Ex0604_BucketSort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Ex0604_BucketSort\\Ex0604_BucketSort.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Ex0701_RedBlackTree.cpp",
+              "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp",
+              "RelativeDocumentMoniker": "Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp",
+              "ToolTip": "C:\\Users\\ckaql\\algorithms\\Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp",
+              "RelativeToolTip": "Ex0701_RedBlackTree\\Ex0701_RedBlackTree.cpp",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-12T19:31:00.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Ex0604_BucketSort.cpp",
               "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0604_BucketSort\\Ex0604_BucketSort.cpp",
               "RelativeDocumentMoniker": "Ex0604_BucketSort\\Ex0604_BucketSort.cpp",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Ex0603_SortingWords.cpp",
               "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0603_SortingWords\\Ex0603_SortingWords.cpp",
               "RelativeDocumentMoniker": "Ex0603_SortingWords\\Ex0603_SortingWords.cpp",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "Ex0603_SortingWords\\Ex0603_SortingWords.cpp",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-11T19:18:40.438Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T19:18:40.438Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Ex0502_Quick3way.cpp",
               "DocumentMoniker": "C:\\Users\\ckaql\\algorithms\\Ex0502_Quick3way\\Ex0502_Quick3way.cpp",
               "RelativeDocumentMoniker": "Ex0502_Quick3way\\Ex0502_Quick3way.cpp",
