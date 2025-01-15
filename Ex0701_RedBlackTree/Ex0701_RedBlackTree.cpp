@@ -160,12 +160,21 @@ public:
 
 		// 오른쪽이 레드이고 왼쪽은 레드가 아니면?
 		// if (TODO) h = TODO
+		if (isRed(h->right) && !isRed(h->left)) {
+			RotateLeft(h);
+		}
 
 		// 왼쪽과 왼쪽의 왼쪽이 둘 다 레드이면?
 		// if (TODO) h = TODO
+		if (isRed(h->left) && isRed(h->left->left)) {
+			RotateRight(h);
+		}
 
 		// 왼쪽, 오른쪽이 둘 다 레드이면? 
 		// if (TODO) TODO
+		if (isRed(h->left) && isRed(h->right)) {
+			FlipColors(h);
+		}
 
 		h->size = Size(h->left) + Size(h->right) + 1;
 

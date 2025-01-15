@@ -28,7 +28,9 @@ public:
 		// 찾았는지 못 찾았는 지에 대한 대응을 호출한 쪽으로 넘기는 방식
 		// std::map, std::unordered_map에서는 iterator를 반환
 
-		// cout << key << " was not found." << endl;
+		for (auto& a : this->list) {
+			if (a.key == key) return &a;
+		}
 
 		return nullptr;
 	}
@@ -36,6 +38,9 @@ public:
 	void Insert(Node n)
 	{
 		// TODO: 키를 찾아봤는데 없으면 추가
+		if (Find(n.key) == nullptr) {
+			list.push_back(n);
+		}
 
 		// 이미 있을 경우에는 추가 X
 	}
@@ -75,14 +80,12 @@ public:
 
 	Node* Find(T_KEY k)
 	{
-		// TODO:
-
-		return nullptr;
+		return st[HashFunc(k)].Find(k);
 	}
 
 	void Insert(Node n)
 	{
-		// TODO:
+		st[HashFunc(n.key)].Insert(n);
 	}
 
 	void Reset()

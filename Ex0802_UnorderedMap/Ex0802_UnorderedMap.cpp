@@ -71,7 +71,13 @@ int main()
 		{
 			int birthday = dist(g);
 
-			// TODO:
+			if (map.count(birthday)) {
+				samebirthday_count++;
+				map[birthday]++;
+			} else {
+				map.insert({ birthday, 1 });
+			}
+
 		}
 
 		if (samebirthday_count > 0)
