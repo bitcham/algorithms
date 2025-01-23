@@ -145,12 +145,23 @@ public:
 	{
 		// TODO: 우선순위가 높은 것을 수영해서 수면위로 올라가듯 위로 올리는 과정
 		// 힌트: Greater(), Exch() 사용
+		while (k > 1 && Greater(k / 2, k)) {
+			Exch(k, k / 2);
+			k = k / 2;
+		}
 	}
 
 	void Sink(int k)
 	{
 		// TODO: 우선순위가 낮은 것을 밑으로 가라앉히는 과정
 		// 힌트: Greater(), Exch() 사용
+		while (2 * k <= size) {
+			int j = 2 * k;
+			if (j < size && Greater(j, j + 1)) j++;
+			if (!Greater(k, j)) break;
+			Exch(k, j);
+			k = j;
+		}
 	}
 
 	void Print()
