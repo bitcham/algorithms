@@ -87,8 +87,16 @@ public:
 	int FindMinVertex()
 	{
 		//TODO: 아직 방문하지 않은 정점들 중에서 dist가 가장 작은 것의 인덱스를 반환
+		double min_dst = numeric_limits<double>::infinity();
+		int v = -1;
+		for (int i = 0; i < dist.size(); i++) {
+			if (dist[i] < min_dst && !visited[i]) {
+				min_dst = dist[i];
+				v = i;
+			}
+		}
 
-		return -1;
+		return v;
 	}
 
 	// 여기서 Relax는 점점 긴장을 풀어간다는 의미입니다.
@@ -98,7 +106,17 @@ public:
 	{
 		cout << v << endl;
 
-		//TODO: 
+		//TODO:
+		for (DirectedEdge& e : g.Adj(v)) {
+			int w = e.To();
+			double new_dist = dist[v] + e.weight;
+			if (dist[w] > new_dist) {
+				dist[w] = new_dist;
+				prev[w] = e.From();
+			}
+
+		}
+		
 
 		PrintDist(dist);
 	}
@@ -122,6 +140,22 @@ public:
 	void PrintPaths()
 	{
 		// TODO: prev 이용
+		for (int i = 0; i < prev.size(); i++) {
+			deque<int> path;
+			path.push_back(i);
+			int v = prev[i];
+			while (v != -1) {
+				path.push_front(v);
+				v = prev[v];
+			}
+
+			for (auto v : path) {
+				cout << v;
+				if (v != path.back())
+					cout << " -> ";
+			}
+			cout << endl;
+		}
 	}
 
 private:
