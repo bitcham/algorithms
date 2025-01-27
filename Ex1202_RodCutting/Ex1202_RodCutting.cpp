@@ -16,6 +16,7 @@ int RecurCutRod(const vector<int>& prices, int length)
 	for (int i = 1; i <= length; i++)
 	{
 		// TODO:
+		max_price = std::max(max_price, prices[i] + RecurCutRod(prices, length - i));
 	}
 
 	return max_price;
@@ -27,6 +28,24 @@ int MemoizedCutRodHelper(const vector<int>& prices, int length, vector<int>& mem
 		return memo[length];
 
 	// TODO:
+	//memo[length] = max(prices[length], MemoizedCutRodHelper(prices, length - 1, memo));
+	int max_price;
+
+	if (length == 0)
+	{
+		max_price = 0; // memo[0]
+	}
+	else
+	{
+		max_price = numeric_limits<int>::min();
+
+		for (int i = 1; i <= length; i++)
+		{
+			max_price = std::max(max_price, prices[i] + MemoizedCutRodHelper(prices, length - i, memo));
+		}
+	}
+
+	memo[length] = max_price;
 
 	for (auto& t : memo) cout << setw(3) << t; cout << endl;
 
@@ -51,6 +70,11 @@ int BottomUpCutRod(const vector<int>& prices, int length)
 		int max_price = numeric_limits<int>::min();
 
 		// TODO:
+		for(int i = 1; i <= j; i++){
+			max_price = max(max_price, prices[i] + table[j - i]);
+		}
+		table[j] = max_price;
+		
 
 		for (auto& t : table) cout << setw(3) << t; cout << endl;
 	}
@@ -65,6 +89,29 @@ int ExtendedBottomUpCutRod(const vector<int>& prices, int length)
 	table[0] = 0; // length* prices[0];
 
 	// TODO:
+
+	vector<int> split(length + 1, -1);
+	for (int j = 1; j <= length; j++)
+	{
+		int max_price = numeric_limits<int>::min();
+		
+		for (int i = 1; i <= j; i++) {
+			if (max_price < prices[i] + table[j - i]) {
+				max_price = max(max_price, prices[i] + table[j - i]);
+				split[j] = i;
+			}
+		}
+		table[j] = max_price;
+
+	}
+
+	cout << "Split: ";
+	int n = length;
+	while (n > 0) {
+		cout << split[n] << "(" << prices[split[n]] << ")";
+		n = n - split[n];
+	}
+	cout << endl;
 
 	return table[length];
 }
