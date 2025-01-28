@@ -62,6 +62,10 @@ int main()
 		for (auto e : edges)
 		{
 			// TODO:
+			if (dist[e.w] < dist[e.v] * e.weight) {
+				dist[e.w] = dist[e.v] * e.weight;
+				prev[e.w] = e.v;
+			}
 		}
 
 		Print(dist);
@@ -73,8 +77,26 @@ int main()
 		{
 			cout << "Arbitrage opportunity was found." << endl;
 			prev[e.w] = e.v;
+			
 
 			// TODO:
+			vector<int> path;
+			int p = e.w;
+			while (p >= 0) {
+				path.push_back(p);
+				if (std::count(path.begin(), path.end(), p) == 2) break;
+				p = prev[p];
+			}
+			std::reverse(path.begin(), path.end());
+			Print(path);
+			double t = 1.0;
+			for (int i = 0; i < path.size() - 1; i++) {
+				int v = path[i];
+				int w = path[i + 1];
+				t *= rates[v][w];
+				cout << rates[v][w] << " " << t << endl;
+			}
+			cout << t << endl;
 
 			exit(0);
 		}
