@@ -35,7 +35,7 @@ int RecurUnboundedKnapsack(vector<int> weights, vector<int> values, int W, int n
 	{
 		return max(
 			RecurUnboundedKnapsack(weights, values, W, n - 1), // Case 1
-			RecurUnboundedKnapsack(weights, values, W - weights[n - 1], n - 1) + values[n - 1] // Case 2
+			RecurUnboundedKnapsack(weights, values, W - weights[n - 1], n) + values[n - 1] // Case 2
 		);
 	}
 }
@@ -58,15 +58,15 @@ int BottomUpUnboundedKnapsack1(vector<int> weights, vector<int> values, int W)
 			else
 			{
 				// TODO: 아래는 ZeroOneKnapsack()와 동일합니다. 재귀버전과 비슷하게 수정해보세요.
-				if (table[w][n - 1] > table[w - weights[n - 1]][n - 1] + values[n - 1])
+				if (table[w][n - 1] > table[w - weights[n - 1]][n] + values[n - 1])
 				{
 					table[w][n] = table[w][n - 1];
 					items[w][n] = items[w][n - 1];
 				}
 				else
 				{
-					table[w][n] = table[w - weights[n - 1]][n - 1] + values[n - 1];
-					items[w][n] = items[w - weights[n - 1]][n - 1];
+					table[w][n] = table[w - weights[n - 1]][n] + values[n - 1];
+					items[w][n] = items[w - weights[n - 1]][n];
 					items[w][n][n - 1] += 1;
 				}
 			}
@@ -145,6 +145,12 @@ int BottomUpUnboundedKnapsack2(vector<int> weights, vector<int> values, int W)
 			if (weights[n - 1] <= w)
 			{
 				// TODO:
+				if (table[w] < table[w - weights[n - 1]] + values[n - 1]) {
+					table[w] = table[w - weights[n - 1]] + values[n - 1];
+					items[w] = items[w - weights[n - 1]] ;
+					items[w][n - 1] += 1;
+				}
+				
 			}
 		}
 

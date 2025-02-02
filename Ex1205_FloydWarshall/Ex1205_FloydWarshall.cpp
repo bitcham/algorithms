@@ -88,9 +88,12 @@ void RepeatingBellmanFord(const vector<vector<double>>& graph)
 				for (int j = 0; j < V; j++)
 				{
 					// TODO: grpah[][]와 dist[][]를 사용해서 dist_k와 prev_k 업데이트
+					if (dist[s][j] > dist[s][i] + graph[i][j]) {
+						dist_k[s][j] = dist[s][i] + graph[i][j];
+						prev_k[s][j] = prev[i][j];
+					}
 				}
 			}
-
 			swap(dist_k, dist);
 			swap(prev_k, prev);
 
@@ -141,6 +144,10 @@ void FloydWarshall(const vector<vector<double>>& graph)
 			for (int j = 0; j < V; j++)
 			{
 				// TODO: i -> j 와 i -> k -> j 비교해서 필요하면 업데이트
+				if (dist[i][j] > dist[i][k] + graph[k][j]) {
+					dist_k[i][j] = dist[i][k] + graph[k][j];
+					prev_k[i][j] = prev[k][j];
+				}
 			}
 		}
 
@@ -171,7 +178,9 @@ int main()
 		{kInf, kInf, kInf, 6.0, 0.0}
 	};
 
-	// RepeatingBellmanFord(graph);
+	
+
+	//RepeatingBellmanFord(graph);
 
 	FloydWarshall(graph);
 }

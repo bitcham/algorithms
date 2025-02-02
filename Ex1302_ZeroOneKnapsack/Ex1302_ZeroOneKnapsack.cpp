@@ -22,10 +22,11 @@ int RecurZeroOneKnapsack(const vector<int>& weights, const vector<int>& values, 
 		return 0;
 	}
 
-	/*
-	if ( TODO: 용량 W가 부족해서 weights[n - 1]를 넣을 수 없다면 )
+	
+	if (W < weights[n - 1])
 	{
-		return TODO: n번째 아이템을 넣지 않는 서브트리로 내려감 (용량은 그대로)
+		//TODO: n번째 아이템을 넣지 않는 서브트리로 내려감 (용량은 그대로)
+		return RecurZeroOneKnapsack(weights, values, W, n - 1);
 	}
 	else
 	{
@@ -35,13 +36,11 @@ int RecurZeroOneKnapsack(const vector<int>& weights, const vector<int>& values, 
 		//                   재귀호출 결과를 그대로 사용하면 안되고 뭔가 더해줘야 합니다.
 
 		return max(
-			TODO, // Case 1
-			TODO, // Case 2
+			RecurZeroOneKnapsack(weights, values, W, n - 1), // Case 1
+			RecurZeroOneKnapsack(weights, values, W - weights[n - 1], n - 1) + values[n - 1] // Case 2
 		);
 	}
-	*/
-
-	return 0; // TODO: 제거
+	
 }
 
 int ZeroOneKnapsack(vector<int> weights, vector<int> values, int W)
@@ -62,11 +61,11 @@ int ZeroOneKnapsack(vector<int> weights, vector<int> values, int W)
 		{
 			// 힌트: 재귀호출 하는 대신에 먼저 계산되어서 table에 저장되어 있는 값 사용
 
-			/*
-			if ( TODO ) // 아이템 weights[n - 1]이 용량초과라서 넣을 수 없는 경우
+			
+			if ( w < weights[n-1]) // 아이템 weights[n - 1]이 용량초과라서 넣을 수 없는 경우
 			{
-				table[w][n] = TODO
-				items[w][n] = TODO
+				table[w][n] = table[w][n - 1];
+				items[w][n] = items[w][n - 1];
 			}
 			else
 			{
@@ -77,12 +76,12 @@ int ZeroOneKnapsack(vector<int> weights, vector<int> values, int W)
 				}
 				else // Case 2: 넣는 경우
 				{
-					table[w][n] = TODO
+					table[w][n] = table[w - weights[n - 1]][n - 1] + values[n - 1];
 					items[w][n] = items[w - weights[n - 1]][n - 1];
 					items[w][n][n - 1] += 1; // 안내: 가장 오른쪽 [n-1]은 0-based indexing이라서 -1 추가
 				}
 			}
-			*/
+			
 		}
 	}
 

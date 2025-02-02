@@ -11,21 +11,17 @@ string RecurLCS(const string& X, const string& Y, int m, int n)
 	if (m == 0 || n == 0)
 		return string("");
 
-	/*
+	
 	if (X[m - 1] == Y[n - 1])
 	{
-		return TODO:
+		return RecurLCS(X, Y, m-1, n-1) + X[m - 1];
 	}
 	else
 	{
-		string s1 = TODO:
-		string s2 = TODO:
-
+		string s1 = RecurLCS(X, Y, m -1 , n);
+		string s2 = RecurLCS(X, Y, m, n - 1);
 		return s1.size() >= s2.size() ? s1 : s2;
 	}
-	*/
-
-	return string(""); // TODO: 불필요, 삭제
 }
 
 int RecurLengthLCS(const string& X, const string& Y, int m, int n)
@@ -33,14 +29,13 @@ int RecurLengthLCS(const string& X, const string& Y, int m, int n)
 	if (m == 0 || n == 0)
 		return 0;
 
-	/*
+	
 	if (X[m - 1] == Y[n - 1])
-		return TODO
+		return RecurLengthLCS(X, Y, m - 1, n - 1) + 1;
 	else
-		return max(TODO, TODO);
-	*/
+		return max(RecurLengthLCS(X, Y, m -1, n), RecurLengthLCS(X, Y, m, n -1));
+	
 
-	return 0; // TODO: 불필요, 삭제
 }
 
 void PrintLCS(const vector<vector<char>>& prev, const string& X, int i, int j)
@@ -83,29 +78,29 @@ int BottomUpLCS(const string& X, const string& Y, int m, int n)
 	{
 		for (int j = 1; j <= n; j++)
 		{
-			/*
+			
 			if (X[i - 1] == Y[j - 1]) // 주의: i - 1, j - 1
 			{
-				table[i][j] = TODO;
+				table[i][j] = table[i - 1][j - 1] + 1;;
 
 				prev[i][j] = '\\'; // [i-1][j-1]에서 가져왔다는 의미
-				lcs[i][j] = TODO;
+				lcs[i][j] = lcs[i-1][j-1] + X[i-1];
 			}
 			else if (table[i - 1][j] >= table[i][j - 1])
 			{
-				table[i][j] = TODO;
+				table[i][j] = table[i -1][j];
 
 				prev[i][j] = '|'; // [i-1][j]에서 가져왔다는 의미
-				lcs[i][j] = TODO;
+				lcs[i][j] = lcs[i-1][j];
 			}
 			else
 			{
-				table[i][j] = TODO;
+				table[i][j] = table[i][j-1];
 
 				prev[i][j] = '-'; // [i][j-1]에서 가져왔다는 의미
-				lcs[i][j] = TODO;
+				lcs[i][j] = lcs[i][j - 1];
 			}
-			*/
+			
 		}
 	}
 
