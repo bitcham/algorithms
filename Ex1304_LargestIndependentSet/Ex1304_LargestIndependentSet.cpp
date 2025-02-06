@@ -36,10 +36,31 @@ int RecurLIS(Node* root)
 
 int MemoLIS(Node* root)
 {
-	// TODO:
+	if (root == nullptr)
+		return 0;
 
-	return 0;
+	if (root->memo) {
+		return root->memo;
+	}
+
+	if (root->left == NULL && root->right == NULL) {
+		root->memo = 1;
+		return root->memo;
+	}
+
+	int case1 = MemoLIS(root->left) + MemoLIS(root->right);
+	int case2 = 1;
+	if (root->left)
+		case2 += MemoLIS(root->left->left) + MemoLIS(root->left->right);
+	if (root->right)
+		case2 += MemoLIS(root->right->left) + MemoLIS(root->right->right);
+	
+	root->memo = max(case1, case2);
+	return root->memo;
+
 }
+
+
 
 Node* MakeNode(int data)
 {

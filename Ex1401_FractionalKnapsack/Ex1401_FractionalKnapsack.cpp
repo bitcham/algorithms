@@ -40,6 +40,20 @@ double FractionalKnapsack(vector<Item> items, double W)
 	for (auto& i : items)
 	{
 		// TODO:
+		int value = i.value / i.weight;
+		while (i.weight != 0 && W != 0) {
+			if (W >= i.weight) {
+				vsum += value * i.weight;
+				W -= i.weight;
+				i.weight = 0;
+			}
+			else {
+				vsum += value * W;
+				W = 0;
+				i.weight -= W;
+			}
+		}
+		
 	}
 
 	return vsum;

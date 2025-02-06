@@ -12,6 +12,9 @@ struct Activity
 bool Compare(struct Activity a, struct Activity b)
 {
 	// TODO:
+	if (a.end < b.end) {
+		return true;
+	}
 	return false;
 }
 
@@ -49,6 +52,14 @@ vector<Activity> GreedyActivitySelection(vector<Activity>& activities)
 	vector<Activity> schedule;
 
 	// TODO:
+	int index = 0;
+	schedule.push_back(activities[0]);
+	for (int i = 1; i < activities.size(); i++) {
+		if (schedule[index].end < activities[i].start) {
+			schedule.push_back(activities[i]);
+			index++;
+		}
+	}
 
 	return schedule;
 }

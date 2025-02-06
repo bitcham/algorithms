@@ -50,6 +50,9 @@ public:
 
 		// TODO: 우선순위큐에다가 일단 모든 정점의 인덱스를 넣는다.
 		//       위에서 key[0] = 0.0 이기 때문에 0번이 가장 위로 온다.
+		for (int v = 0; v < V; v++) {
+			pq.Insert(v, key[v]);
+		}
 
 		while (!pq.Empty())
 		{
@@ -66,12 +69,12 @@ public:
 				int v = e.v;
 				double weight = e.weight; // u-v 간선 비용
 
-				// if( TODO: v가 pq안에 아직 있는지 && u-v 비용이 더 적은지)
-				//{
-				//	pre[v] = u;
-				//	key[v] = weight;
-				//	pq.ChangeKey(v, weight);
-				//}
+				 if(pq.Contains(v) && key[v] > weight)//todo: v가 pq안에 아직 있는지 && u-v 비용이 더 적은지
+				{
+					pre[v] = u;
+					key[v] = weight;
+					pq.ChangeKey(v, weight);
+				}
 			}
 		}
 
