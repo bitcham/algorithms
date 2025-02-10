@@ -117,10 +117,18 @@ public:
 		{
 			// 힌트: Other(), ResidualCapacityTo(), AddResidualFlowTo() 사용
 			// TODO:
+			double bottle = numeric_limits<double>::max();
 
+			for (int v = t; v != s; v = prev[v]->Other(v)) {
+				bottle = min(bottle, prev[v]->ResidualCapacityTo(v));
+			}
+
+			for (int v = t; v != s; v = prev[v]->Other(v)) {
+				prev[v]->AddResidualFlowTo(v, bottle);
+			}
+			
+			value += bottle;
 			Print(g);
-
-			break; // TODO: 삭제
 		}
 	}
 

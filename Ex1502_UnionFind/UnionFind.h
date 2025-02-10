@@ -26,7 +26,8 @@ public:
 
 	bool Connected(int p, int q)
 	{
-		return Find(p) == Find(q);
+		//return Find(p) == Find(q);
+		return FindQU(p) == FindQU(q);
 	}
 
 	/* Quick-Find 방식: Union()에서 미리 정리하기 때문에 Find()는 빠름 */
@@ -45,34 +46,41 @@ public:
 		for (int i = 0; i < group.size(); i++)
 		{
 			// TODO:
+			if (group[i] == pid) {
+				group[i] = qid;
+			}
+			
+
 		}
 
 		num_groups--;
 	}
 
 	/* Quick-Union 방식: Union()은 빠르고 Find()할 때 정리 */
-	/*
-	int Find(int p)
+	
+	int FindQU(int p)
 	{
 		while (p != group[p])
 		{
-			// TODO:
+			 //todo:
+			p = group[p];
+
 		}
 
 		return p;
 	}
 
-	void Union(int p, int q)
+	void UnionQU(int p, int q)
 	{
-		int i = Find(p);
-		int j = Find(q);
+		int i = FindQU(p);
+		int j = FindQU(q);
 		if (i == j) return;
 
 		group[i] = j;
 
 		num_groups--;
 	}
-	*/
+	
 
 	void Print()
 	{

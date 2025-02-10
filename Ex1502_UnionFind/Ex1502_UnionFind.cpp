@@ -21,7 +21,9 @@ int main()
 		cout << u << " " << v << " " << std::boolalpha << connected << endl;
 		cout << "Union " << u << " " << v << endl;
 
-		uf.Union(u, v);
+		//uf.Union(u, v);
+
+		uf.UnionQU(u, v);
 
 		uf.Print();
 	}

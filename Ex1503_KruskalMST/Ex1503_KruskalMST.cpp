@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <vector>
 #include <list>
+#include <algorithm>
 
 struct Edge
 {
@@ -56,6 +57,12 @@ int main()
 	for (auto& e : edges)
 	{
 		// TODO:
+		int u = e.u;
+ 		int v = e.v;
+
+		if (uf.Connected(u, v)) continue;
+
+		uf.UnionQU(u, v);
 
 		mst_wt += e.weight;
 
